@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以图搜图设置</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="settings">
+      <header>
+        <h1>以图搜图设置</h1>
+        <p>IQDB、ascii2d 和 SauceNAO 适合动漫插画来源；trace.moe 适合动画截图。</p>
+      </header>
+
+      <form id="optionsForm">
+        <section>
+          <h2>平台</h2>
+          <label class="toggle-row">
+            <input id="iqdbEnabled" type="checkbox">
+            <span>
+              <strong>IQDB</strong>
+              <small>无需 API Key，返回动漫图片站点匹配</small>
+            </span>
+          </label>
+
+          <label class="toggle-row">
+            <input id="ascii2dEnabled" type="checkbox">
+            <span>
+              <strong>ascii2d</strong>
+              <small>增强 Pixiv、Twitter 等插画出处搜索</small>
+            </span>
+          </label>
+
+          <label class="toggle-row">
+            <input id="saucenaoEnabled" type="checkbox">
+            <span>
+              <strong>SauceNAO</strong>
+              <small>无 Key 时使用网页模式，填写 API Key 后使用 JSON API</small>
+            </span>
+          </label>
+          <label class="field">
+            <span>SauceNAO API Key</span>
+            <input id="saucenaoApiKey" type="password" autocomplete="off" placeholder="可选">
+          </label>
+
+          <label class="toggle-row">
+            <input id="traceMoeEnabled" type="checkbox">
+            <span>
+              <strong>trace.moe</strong>
+              <small>识别动画截图的番名、集数和时间点</small>
+            </span>
+          </label>
+          <label class="field">
+            <span>trace.moe API Key</span>
+            <input id="traceMoeApiKey" type="password" autocomplete="off" placeholder="可选">
+          </label>
+        </section>
+
+        <section>
+          <h2>结果</h2>
+          <label class="field">
+            <span>最低相似度</span>
+            <input id="minSimilarity" type="number" min="0" max="100" step="1">
+          </label>
+          <label class="field">
+            <span>每个平台返回数量</span>
+            <input id="resultLimit" type="number" min="1" max="30" step="1">
+          </label>
+        </section>
+
+        <footer>
+          <button class="primary-button" type="submit">保存</button>
+          <button id="resetButton" class="ghost-button" type="button">恢复默认</button>
+          <span id="saveStatus" role="status"></span>
+        </footer>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

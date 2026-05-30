@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>正在以图搜图</title>
+    <link rel="stylesheet" href="waiting.css">
+  </head>
+  <body>
+    <main class="waiting-page">
+      <section class="waiting-panel">
+        <div class="spinner" aria-hidden="true"></div>
+        <div class="copy">
+          <h1>正在搜索相似图片</h1>
+          <p id="statusMessage" role="status">正在读取图片</p>
+        </div>
+
+        <img id="previewImage" alt="待搜索图片" hidden>
+
+        <div id="providerStrip" class="provider-strip" aria-label="搜索平台状态"></div>
+      </section>
+    </main>
+    <script src="image-store.js"></script>
+    <script src="search.js"></script>
+    <script src="waiting.js"></script>
+  </body>
+</html>

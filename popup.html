@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以图搜图</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>以图搜图</h1>
+          <p id="subtitle">拖入图片或点击选择</p>
+        </div>
+        <button id="openOptions" class="icon-button" type="button" aria-label="设置" title="设置">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z"></path>
+            <path d="M19.4 15a1.8 1.8 0 0 0 .36 1.99l.04.04a2.1 2.1 0 0 1-2.97 2.97l-.04-.04a1.8 1.8 0 0 0-1.99-.36 1.8 1.8 0 0 0-1.1 1.66V21a2.1 2.1 0 0 1-4.2 0v-.06a1.8 1.8 0 0 0-1.18-1.66 1.8 1.8 0 0 0-1.99.36l-.04.04a2.1 2.1 0 0 1-2.97-2.97l.04-.04A1.8 1.8 0 0 0 3.72 15a1.8 1.8 0 0 0-1.66-1.1H2a2.1 2.1 0 0 1 0-4.2h.06a1.8 1.8 0 0 0 1.66-1.18 1.8 1.8 0 0 0-.36-1.99l-.04-.04A2.1 2.1 0 0 1 6.29 3.5l.04.04a1.8 1.8 0 0 0 1.99.36H8.4A1.8 1.8 0 0 0 9.5 2.24V2a2.1 2.1 0 0 1 4.2 0v.06a1.8 1.8 0 0 0 1.1 1.66 1.8 1.8 0 0 0 1.99-.36l.04-.04a2.1 2.1 0 0 1 2.97 2.97l-.04.04a1.8 1.8 0 0 0-.36 1.99v.08a1.8 1.8 0 0 0 1.66 1.1H21a2.1 2.1 0 0 1 0 4.2h-.06A1.8 1.8 0 0 0 19.4 15Z"></path>
+          </svg>
+        </button>
+      </header>
+
+      <section id="dropZone" class="drop-zone" aria-label="图片上传区">
+        <input id="fileInput" type="file" accept="image/*" hidden>
+        <div id="emptyState" class="empty-state">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 16.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.5"></path>
+            <path d="M12 3v13"></path>
+            <path d="m7 8 5-5 5 5"></path>
+          </svg>
+          <strong>选择或拖入图片</strong>
+          <span>JPG、PNG、WebP、GIF</span>
+        </div>
+        <div id="previewState" class="preview-state" hidden>
+          <img id="previewImage" alt="待搜索图片">
+          <div>
+            <strong id="fileName">image</strong>
+            <span id="fileMeta">准备搜索</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="chooseButton" class="primary-button" type="button">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+            <path d="M12 18v-6"></path>
+            <path d="m9 15 3 3 3-3"></path>
+          </svg>
+          选择图片
+        </button>
+        <button id="clearButton" class="ghost-button" type="button" hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+          清除
+        </button>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status"></p>
+    </main>
+    <script src="image-store.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

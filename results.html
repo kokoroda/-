@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以图搜图结果</title>
+    <link rel="stylesheet" href="results.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div>
+          <h1>以图搜图结果</h1>
+          <p id="statusMessage" role="status">准备搜索</p>
+        </div>
+        <button id="openOptions" class="icon-button" type="button" aria-label="设置" title="设置">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z"></path>
+            <path d="M19.4 15a1.8 1.8 0 0 0 .36 1.99l.04.04a2.1 2.1 0 0 1-2.97 2.97l-.04-.04a1.8 1.8 0 0 0-1.99-.36 1.8 1.8 0 0 0-1.1 1.66V21a2.1 2.1 0 0 1-4.2 0v-.06a1.8 1.8 0 0 0-1.18-1.66 1.8 1.8 0 0 0-1.99.36l-.04.04a2.1 2.1 0 0 1-2.97-2.97l.04-.04A1.8 1.8 0 0 0 3.72 15a1.8 1.8 0 0 0-1.66-1.1H2a2.1 2.1 0 0 1 0-4.2h.06a1.8 1.8 0 0 0 1.66-1.18 1.8 1.8 0 0 0-.36-1.99l-.04-.04A2.1 2.1 0 0 1 6.29 3.5l.04.04a1.8 1.8 0 0 0 1.99.36H8.4A1.8 1.8 0 0 0 9.5 2.24V2a2.1 2.1 0 0 1 4.2 0v.06a1.8 1.8 0 0 0 1.1 1.66 1.8 1.8 0 0 0 1.99-.36l.04-.04a2.1 2.1 0 0 1 2.97 2.97l-.04.04a1.8 1.8 0 0 0-.36 1.99v.08a1.8 1.8 0 0 0 1.66 1.1H21a2.1 2.1 0 0 1 0 4.2h-.06A1.8 1.8 0 0 0 19.4 15Z"></path>
+          </svg>
+        </button>
+      </header>
+
+      <section id="searchSummary" class="search-summary" hidden>
+        <img id="previewImage" alt="待搜索图片" hidden>
+        <div class="summary-copy">
+          <h2 id="fileName">图片</h2>
+          <p id="fileMeta">读取中</p>
+          <div id="providerStrip" class="provider-strip" aria-label="搜索平台状态"></div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <section class="results-panel" aria-label="搜索结果">
+          <div class="section-header">
+            <h2>相似图片</h2>
+            <span id="resultCount">0</span>
+          </div>
+          <div id="resultsList" class="results-list"></div>
+        </section>
+
+      </section>
+    </main>
+    <script src="image-store.js"></script>
+    <script src="search.js"></script>
+    <script src="results.js"></script>
+  </body>
+</html>

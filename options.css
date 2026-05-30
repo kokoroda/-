@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --ink: #17211d;
+  --muted: #66716c;
+  --line: #dce2de;
+  --teal: #14746f;
+  --teal-ink: #f7fffd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.settings {
+  display: grid;
+  gap: 22px;
+  width: min(720px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+header p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+form,
+section {
+  display: grid;
+  gap: 16px;
+}
+
+section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.toggle-row {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.toggle-row input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--teal);
+}
+
+.toggle-row span {
+  display: grid;
+  gap: 2px;
+}
+
+small {
+  color: var(--muted);
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.field input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 8px 10px;
+}
+
+.field input:focus {
+  border-color: var(--teal);
+  outline: 2px solid rgba(20, 116, 111, 0.16);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-button,
+.ghost-button {
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 14px;
+}
+
+.primary-button {
+  background: var(--teal);
+  color: var(--teal-ink);
+}
+
+.ghost-button {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+#saveStatus {
+  color: var(--muted);
+  font-size: 13px;
+}
