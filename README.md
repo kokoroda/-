@@ -2,6 +2,12 @@
 
 一个 Manifest V3 浏览器扩展。点击扩展图标后，可以拖入图片或选择本地图片，扩展会自动调用可返回结构化结果的以图搜图平台，并按相似度排序展示图片、出处和来源链接。
 
+## 下载
+
+- [下载最新安装包（ZIP）](https://github.com/kokoroda/-/raw/main/releases/image-search-extension-v1.0.0.zip)
+
+Chrome 和 Edge 不允许从 GitHub 直接安装未上架扩展。下载 ZIP 并解压后，只需要在扩展管理页选择解压后的文件夹。
+
 ## 已接入平台
 
 - IQDB：无需 API Key，适合动漫图片站点的相似图片和出处搜索。支持 JPG、PNG、GIF，最大 8MB。
@@ -12,10 +18,11 @@
 
 ## 安装
 
-1. 打开 Chrome 或 Edge 的扩展管理页。
-2. 打开“开发者模式”。
-3. 选择“加载已解压的扩展程序”。
-4. 选择本目录：`E:\以图搜图`。
+1. 下载上方 ZIP 安装包并解压到任意文件夹。
+2. 打开 Chrome 的 `chrome://extensions/` 或 Edge 的 `edge://extensions/`。
+3. 打开“开发者模式”。
+4. 选择“加载已解压的扩展程序”。
+5. 选择刚刚解压出的文件夹。该文件夹内应当可以直接看到 `manifest.json`。
 
 ## 使用
 
