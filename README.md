@@ -4,7 +4,7 @@
 
 ## 下载
 
-- [下载最新安装包（ZIP）](https://github.com/kokoroda/-/raw/main/releases/image-search-extension-v1.0.0.zip)
+- [下载最新安装包（ZIP）](https://github.com/kokoroda/-/releases/download/v1.0.0/image-search-extension-v1.0.0.zip)
 
 Chrome 和 Edge 不允许从 GitHub 直接安装未上架扩展。下载 ZIP 并解压后，只需要在扩展管理页选择解压后的文件夹。
 
