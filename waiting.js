@@ -12,7 +12,14 @@ const providerChips = new Map();
 init();
 
 async function init() {
-  const id = new URLSearchParams(location.search).get("id");
+  const params = new URLSearchParams(location.search);
+  const errorMessage = params.get("error");
+  if (errorMessage) {
+    setStatus(errorMessage, true);
+    return;
+  }
+
+  const id = params.get("id");
   if (!id) {
     setStatus("没有图片任务，请从扩展弹窗重新上传。", true);
     return;
